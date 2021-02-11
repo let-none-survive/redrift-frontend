@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Modal = ({ onClose, isOpen, children, onSave, isLoading = false }) => {
+const Modal = ({ onClose, isOpen, children, onSave, isLoading = false, isDelete, isMove }) => {
   return (
     <div className={classNames('modal', { 'is-active': isOpen })}>
       <div className="modal-background" />
@@ -14,8 +14,8 @@ const Modal = ({ onClose, isOpen, children, onSave, isLoading = false }) => {
           {children}
         </section>
         <footer className="modal-card-foot">
-          <button onClick={onSave} className={classNames('button is-success', { 'is-loading': isLoading })}>Save
-            changes
+          <button onClick={onSave} className={classNames('button is-success', { 'is-loading': isLoading, 'is-danger': isDelete })}>
+            {isDelete ? 'Delete' : 'Save changes'}
           </button>
           <button onClick={onClose} className="button">Cancel</button>
         </footer>
