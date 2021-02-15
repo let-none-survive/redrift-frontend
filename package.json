@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development --open --hot",
-    "server": "yarn build && node server.js"
+    "server": "yarn build && node server.js",
+    "format": "prettier --write \"src/**/*.js\""
   },
   "keywords": [],
   "author": "Roma Boyko",
@@ -24,6 +25,7 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
+    "prettier": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",

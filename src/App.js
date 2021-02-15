@@ -21,7 +21,7 @@ const App = () => {
           <Warehouses />
         </Route>
         <Route path="/">
-          <Redirect to='/productions' />
+          <Redirect to="/productions" />
         </Route>
       </Switch>
     </div>

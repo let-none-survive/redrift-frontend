@@ -7,3 +7,4 @@ coverage
 webpack/webpack-assets.json
 yarn.lock
 .env
+.idea
